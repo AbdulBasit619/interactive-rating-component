@@ -1,0 +1,119 @@
+.card {
+  width: 40rem;
+  border-radius: 24px;
+  background-color: $color--dark_blue;
+  padding: 3rem;
+
+  @include flexCenter;
+  justify-content: flex-start;
+
+  @media only screen and (max-width: 500px) {
+    width: 36rem;
+  }
+
+  .rating__state {
+    @include flexCenter;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.2rem;
+
+    .icon-star-container {
+      background-color: rgba($color--light_grey, 0.05);
+      border-radius: 50%;
+      width: 4.4rem;
+      height: 4.4rem;
+      margin-bottom: 2.4rem;
+
+      @include flexCenter;
+
+      @media only screen and (max-width: 500px) {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .icon--star {
+        @media only screen and (max-width: 500px) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+
+    .ratings {
+      width: 100%;
+      margin-bottom: 1.6rem;
+
+      @include flexCenter;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .rating {
+        color: $color--light_grey;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba($color--light_grey, 0.1);
+        transition: all 0.3s;
+
+        @include flexCenter;
+
+        @media only screen and (max-width: 500px) {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        &:hover {
+          background-color: $color--orange;
+          color: $color--very_dark_blue;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .btn {
+      background: none;
+      outline: none;
+      border: none;
+      width: 100%;
+      padding: 1.5rem 3rem;
+      border-radius: 24px 24px 24px 24px / 50% 50% 50% 50%;
+      background-color: $color--orange;
+      text-transform: uppercase;
+      color: $color--very_dark_blue;
+      font-weight: $fw--bold;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 500px) {
+        font-size: 1.3rem;
+        border-radius: 20px 20px 20px 20px / 50% 50% 50% 50%;
+      }
+
+      &:hover {
+        background-color: $color--white;
+      }
+    }
+  }
+
+  .thankyou__state {
+    @include flexCenter;
+
+    .img__thankyou {
+      margin-bottom: 3rem;
+    }
+
+    .selection-info {
+      font-size: 1.2rem;
+      background-color: rgba($color--light_grey, 0.1);
+      border-radius: 15px 15px 15px 15px / 50% 50% 50% 50%;
+      color: $color--orange;
+      padding: 0.6rem 1.6rem;
+      vertical-align: middle;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}
