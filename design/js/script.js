@@ -49,6 +49,7 @@ ratings.forEach(rating =>
 
 btnSubmit.addEventListener('click', function (e) {
   e.preventDefault();
+  if (!clickedRating) return;
   ratingState.classList.add('hidden');
   selectRating.innerHTML = clickedRating;
   thankYouState.classList.remove('hidden');
